@@ -1,0 +1,11 @@
+{
+  "segments": [
+    "ssh",
+    "git",
+    "newline",
+    "cwd",
+    "root"
+  ],
+  "mode": "flat",
+  "theme": "~/dotfiles/themes/powerline-shell_theme.py"
+}
