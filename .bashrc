@@ -41,7 +41,7 @@ PROMPT_COMMAND='add_line'
 
 #powerline-shell
 function _update_ps1() {
-    PS1="(^◯^).｡o($(powerline-shell $?)"
+    PS1="(*^ ^*).｡o($(powerline-shell $?)"
 }
 
 if [[ $TERM != linux && ! $PROMPT_COMMAND =~ _update_ps1 ]]; then
@@ -164,4 +164,3 @@ fi
 source /opt/ros/kinetic/setup.bash
 source ~/denso_ws/devel/setup.bash
 source ~/ws_moveit/devel/setup.bash
-source /home/shuntaro/denso_ws/devel/setup.bash
