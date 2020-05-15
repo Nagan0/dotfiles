@@ -11,7 +11,7 @@ gsettings set org.gnome.desktop.interface monospace-font-name 'Ubuntu Mono deriv
 
 # powerline-shell
 cd ~/
-mkdir install && cd $_
+mkdir warehouse && cd $_
 git clone https://github.com/b-ryan/powerline-shell
 cd powerline-shell/
 sudo python setup.py install
