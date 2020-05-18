@@ -163,4 +163,3 @@ fi
 
 source /opt/ros/kinetic/setup.bash
 source ~/denso_ws/devel/setup.bash
-source ~/ws_moveit/devel/setup.bash
