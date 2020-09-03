@@ -41,7 +41,7 @@ PROMPT_COMMAND='add_line'
 
 #powerline-shell
 function _update_ps1() {
-    PS1="(*^ ^*).｡o($(powerline-shell $?)"
+    PS1="( ^o^) < $(powerline-shell $?)"
 }
 
 if [[ $TERM != linux && ! $PROMPT_COMMAND =~ _update_ps1 ]]; then
