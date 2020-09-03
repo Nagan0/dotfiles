@@ -1,9 +1,11 @@
 {
   "segments": [
+    "virtual_env",
     "ssh",
     "git",
     "newline",
     "cwd",
+    "newline",
     "root"
   ],
   "mode": "flat",
