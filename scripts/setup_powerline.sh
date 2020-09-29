@@ -33,4 +33,10 @@ mkdir -p ~/.config/powerline-shell && powerline-shell --generate-config > ~/.con
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
+# Lind dotfiles
+ln -sf ~/dotfiles/.vimrc ~/.vimrc
+
+ln -sf ~/dotfiles/.bashrc ~/.bashrc
+
+ln -sf ~/dotfiles/configs/config.json ~/.config/powerline-shell/config.json
 
