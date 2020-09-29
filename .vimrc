@@ -19,9 +19,9 @@ call plug#end()
 set hlsearch "検索ハイライトの設定
 set incsearch "インクリメンタルサーチの設定
 
-"""""""""""""""""""""
+"-----------------------
 " タブ&インデント
-"""""""""""""""""""""
+"-----------------------
 " タブの代わりに空白文字を挿入する
 set expandtab
 " タブ文字の表示幅
@@ -48,6 +48,9 @@ set fenc=utf-8 "文字コードをUTF-8に
 set wildmenu "コマンドライン補完
 set showmatch "対応する括弧やブレースを表示する
 
+" Do not make .swp
+set noswapfile
+
 " Escを2回押すとハイライトを消す
 nnoremap <Esc><Esc> :nohlsearch<CR> 
 
@@ -65,9 +68,7 @@ colorscheme molokai
 set t_Co=256
 set showtabline=2
 syntax enable " 構文に色を付ける
-
 set background=dark "暗い背景色に合わせた配色にする
-
 set ambiwidth=double "○や□の文字が崩れる問題を回避
 
 " Powerline系フォントを利用する
