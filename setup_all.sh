@@ -4,6 +4,9 @@
 # -- pip --
 sudo apt install -y python-pip python3-pip
 
+# -- curl --
+sudo apt install -y curl
+
 # -- Terminator --
 sudo apt install -y terminator
 
