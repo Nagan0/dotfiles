@@ -1,3 +1,6 @@
+#!/bin/bash
+
+
 # dicom
 pip install dicom
 
@@ -25,3 +28,27 @@ sudo ldconfig
 
 # opencv python
 !pip install numpy matplotlib opencv-python sklearn
+
+# gpu driver
+ubuntu-drivers devices
+sudo ubuntu-drivers autoinstall
+sudo reboot
+nvidia-smi
+
+#------------------
+# cuda 10.0 (GeForce GTX960)
+#------------------
+# Download cuda from web
+# referring to https://qiita.com/konzo_/items/3e2d1d7480f7ef632603
+sudo dpkg -i cuda-repo-ubuntu1804_10.0.130-1_amd64.deb
+sudo apt-get update
+sudo apt-get install cuda-toolkit-10-0
+sudo reboot
+
+#------------------
+# cuDNN (cuda 10.0)
+#------------------
+# Download 3 packages (Runtime, Developer and Code Samples).
+sudo dpkg -i libcudnn7_7.6.5.32-1+cuda10.0_amd64.deb
+sudo dpkg -i libcudnn7-dev_7.6.5.32-1+cuda10.0_amd64.deb
+sudo dpkg -i libcudnn7-doc_7.6.5.32-1+cuda10.0_amd64.deb
