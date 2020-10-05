@@ -2,7 +2,7 @@
 
 
 # dicom
-pip install dicom
+!pip install pydicom
 
 #nrrd
 !pip install pynrrd
