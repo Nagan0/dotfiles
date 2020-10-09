@@ -47,6 +47,7 @@ set virtualedit=onemore "行末の1文字先まで移動可
 set fenc=utf-8 "文字コードをUTF-8に
 set wildmenu "コマンドライン補完
 set showmatch "対応する括弧やブレースを表示する
+set wrap "行の折り返し"
 
 " Do not make .swp
 set noswapfile
