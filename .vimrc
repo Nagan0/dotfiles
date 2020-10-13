@@ -52,6 +52,10 @@ set wrap "行の折り返し"
 " Do not make .swp
 set noswapfile
 
+" Use clipboard
+set clipboard&
+set clipboard^=unnamedplus
+
 " Escを2回押すとハイライトを消す
 nnoremap <Esc><Esc> :nohlsearch<CR> 
 
