@@ -68,6 +68,9 @@ inoremap ()  ()<left>
 inoremap <>  <><left>
 inoremap []  []<left>
 
+" jjをesc
+inoremap <silent> jj <ESC>
+
 " カラースキーマの設定
 colorscheme molokai
 set t_Co=256
