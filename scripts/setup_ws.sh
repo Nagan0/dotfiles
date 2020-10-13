@@ -1,15 +1,12 @@
 #!/bin/bash
 
 
-# dicom
-!pip install pydicom
-
-#nrrd
-!pip install pynrrd
+# dicom, nrrd
+pip3 install pydicom pynrrd
 
 # opencv c++
-sudo apt-get install -y  cmake git libgtk2.0-dev pkg-config libavcodec-dev libavformat-dev libswscale-dev
-sudo apt-get install python-dev python-numpy libtbb2 libtbb-dev libjpeg-dev libpng-dev libtiff-dev libdc1394-22-dev
+sudo apt-get install -y  cmake libgtk2.0-dev pkg-config libavcodec-dev libavformat-dev libswscale-dev
+sudo apt-get install python3-dev python3-numpy libtbb2 libtbb-dev libjpeg-dev libpng-dev libtiff-dev libdc1394-22-dev
 git clone https://github.com/opencv/opencv.git
 git clone https://github.com/opencv/opencv_contrib.git
 
@@ -26,9 +23,8 @@ make -j4
 sudo make install -j4
 sudo ldconfig
 
-# opencv python
-!pip install numpy matplotlib opencv-python sklearn
 
+<< COMMENTOUT
 # gpu driver
 ubuntu-drivers devices
 sudo ubuntu-drivers autoinstall
@@ -52,3 +48,6 @@ sudo reboot
 sudo dpkg -i libcudnn7_7.6.5.32-1+cuda10.0_amd64.deb
 sudo dpkg -i libcudnn7-dev_7.6.5.32-1+cuda10.0_amd64.deb
 sudo dpkg -i libcudnn7-doc_7.6.5.32-1+cuda10.0_amd64.deb
+
+COMMENTOUT
+
