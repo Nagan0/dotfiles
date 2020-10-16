@@ -1,10 +1,13 @@
 #!/bin/bash
 
-
+#----------
 # dicom, nrrd
+#----------
 pip3 install pydicom pynrrd
 
+#----------
 # opencv c++
+#----------
 sudo apt-get install -y  cmake libgtk2.0-dev pkg-config libavcodec-dev libavformat-dev libswscale-dev
 sudo apt-get install python3-dev python3-numpy libtbb2 libtbb-dev libjpeg-dev libpng-dev libtiff-dev libdc1394-22-dev
 git clone https://github.com/opencv/opencv.git
@@ -23,9 +26,28 @@ make -j4
 sudo make install -j4
 sudo ldconfig
 
+#----------
+# ITK
+#----------
+sudo apt -yV install build-essential gcc g++ dpkg-dev pkg-config
+
+cd /tmp
+git clone https://github.com/Kitware/ITK
+cd ITK
+mkdir build
+cd build
+cmake ..
+make -j4
+sudo make install -j4
+
+# Use editer
+# Add /etc/ld.so.conf "/usr/local/lib"
+
 
 << COMMENTOUT
+#----------
 # gpu driver
+#----------
 ubuntu-drivers devices
 sudo ubuntu-drivers autoinstall
 sudo reboot
