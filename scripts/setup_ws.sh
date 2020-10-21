@@ -1,15 +1,15 @@
 #!/bin/bash
 
 #----------
-# dicom, nrrd
+# some module
 #----------
-pip3 install pydicom pynrrd
+pip3 install pydicom pynrrd h5py psutil matplotlib scikit-image
 
 #----------
 # opencv c++
 #----------
-sudo apt-get install -y  cmake libgtk2.0-dev pkg-config libavcodec-dev libavformat-dev libswscale-dev
-sudo apt-get install python3-dev python3-numpy libtbb2 libtbb-dev libjpeg-dev libpng-dev libtiff-dev libdc1394-22-dev
+sudo apt install -y  cmake libgtk2.0-dev pkg-config libavcodec-dev libavformat-dev libswscale-dev
+sudo apt install python3-dev python3-numpy libtbb2 libtbb-dev libjpeg-dev libpng-dev libtiff-dev libdc1394-22-dev
 git clone https://github.com/opencv/opencv.git
 git clone https://github.com/opencv/opencv_contrib.git
 
@@ -25,6 +25,7 @@ cmake -D CMAKE_BUILD_TYPE=RELEASE \
 make -j4
 sudo make install -j4
 sudo ldconfig
+
 
 #----------
 # ITK
@@ -42,6 +43,16 @@ sudo make install -j4
 
 # Use editer
 # Add /etc/ld.so.conf "/usr/local/lib"
+
+
+#----------
+# denseinference
+#----------
+sudo apt install -y libboost-dev libboost-all-dev
+git clone https://github.com/soumickmj/DenseInferenceWrapper.git
+cd DenseInferenceWrapper
+make all
+sudo pip install .
 
 
 << COMMENTOUT
