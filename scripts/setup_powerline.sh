@@ -37,4 +37,4 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 ln -sf ~/dotfiles/.vimrc ~/.vimrc
 ln -sf ~/dotfiles/.bashrc ~/.bashrc
 ln -sf ~/dotfiles/configs/config.json ~/.config/powerline-shell/config.json
-
+ln -sf ~/dotfiles/.gitconfig ~/.gitconfig
