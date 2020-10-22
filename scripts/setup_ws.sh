@@ -64,6 +64,15 @@ sudo ubuntu-drivers autoinstall
 sudo reboot
 nvidia-smi
 
+#----------
+# GPU driver
+#----------
+sudo apt update
+sudo add-apt-repository ppa:graphics-drivers/ppa
+ubuntu-drivers devices
+sudo apt install nvidia-#Version
+sudo reboot
+
 #------------------
 # cuda 10.0 (GeForce GTX960)
 #------------------
