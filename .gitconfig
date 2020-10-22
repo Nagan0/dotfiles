@@ -1,0 +1,9 @@
+[user]
+	name = Nagan0
+    email = 49261854+Nagan0@users.noreply.github.com
+
+[pretty]
+  preset = format:%C(yellow reverse) %h %C(green reverse) %an %C(reset)%C(cyan) %ar%C(red)%d%n> %C(bold)%w(0, 0, 2)%B%n
+
+[alias]
+    graph = log --graph --all --date=relative --pretty=preset
