@@ -163,3 +163,4 @@ fi
 
 source /opt/ros/kinetic/setup.bash
 source ~/denso_ws/devel/setup.bash
+export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH

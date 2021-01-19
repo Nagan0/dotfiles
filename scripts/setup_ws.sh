@@ -54,6 +54,7 @@ cd DenseInferenceWrapper
 make all
 sudo pip install .
 
+# export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
 
 << COMMENTOUT
 #----------
