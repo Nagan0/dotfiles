@@ -163,4 +163,6 @@ fi
 
 source /opt/ros/kinetic/setup.bash
 source ~/denso_ws/devel/setup.bash
-export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
+export CUDAHOME=/usr/local/cuda
+export PATH=/usr/local/cuda-10.0/bin${PATH:+:${PATH}}
+export LD_LIBRARY_PATH=/usr/local/cuda-10.0/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}

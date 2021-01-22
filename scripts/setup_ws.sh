@@ -92,5 +92,15 @@ sudo dpkg -i libcudnn7_7.6.5.32-1+cuda10.0_amd64.deb
 sudo dpkg -i libcudnn7-dev_7.6.5.32-1+cuda10.0_amd64.deb
 sudo dpkg -i libcudnn7-doc_7.6.5.32-1+cuda10.0_amd64.deb
 
+#------------------
+# caffe
+#------------------
+sudo apt install -y python python-pip python3-pip python-numpy python-scipy python-matplotlib python-pandas python-sympy python-nose python-tk python-yaml jupyter-notebook
+sudo apt install -y build-essential pkg-config libprotobuf-dev libleveldb-dev libsnappy-dev libhdf5-serial-dev protobuf-compiler libatlas-base-dev libgflags-dev libgoogle-glog-dev liblmdb-dev libhdf5-dev wget
+sudo apt install -y --no-install-recommends libboost-all-dev
+pip3 install ipython opencv-python scikit-image protobuf easydict cython
+
+
+
 COMMENTOUT
 
