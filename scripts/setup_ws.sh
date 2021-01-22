@@ -3,7 +3,7 @@
 #----------
 # some module
 #----------
-pip3 install pydicom pynrrd h5py psutil matplotlib scikit-image
+pip3 install -y pydicom pynrrd h5py psutil matplotlib scikit-image
 
 #----------
 # opencv c++
@@ -80,8 +80,12 @@ sudo reboot
 # Download cuda from web
 # referring to https://qiita.com/konzo_/items/3e2d1d7480f7ef632603
 sudo dpkg -i cuda-repo-ubuntu1804_10.0.130-1_amd64.deb
+# run displayd command "sudo apt-key adv ~"
 sudo apt-get update
 sudo apt-get install cuda-toolkit-10-0
+# add .bashrc 
+# export PATH=/usr/local/cuda-10.0/bin${PATH:+:${PATH}}
+# export LD_LIBRARY_PATH=/usr/local/cuda-10.0/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
 sudo reboot
 
 #------------------
