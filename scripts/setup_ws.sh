@@ -3,7 +3,8 @@
 #----------
 # some module
 #----------
-pip3 install -y pydicom pynrrd h5py psutil matplotlib scikit-image scikit-build
+pip install pydicom pynrrd h5py psutil matplotlib scikit-image scikit-build
+pip3 install pydicom pynrrd h5py psutil matplotlib scikit-image scikit-build
 
 #----------
 # opencv c++
@@ -104,7 +105,9 @@ sudo apt install -y python python-pip python3-pip python-numpy python-scipy pyth
 sudo apt install -y build-essential pkg-config libprotobuf-dev libleveldb-dev libsnappy-dev libhdf5-serial-dev protobuf-compiler libatlas-base-dev libgflags-dev libgoogle-glog-dev liblmdb-dev libhdf5-dev wget
 sudo apt install -y --no-install-recommends libboost-all-dev
 pip3 install ipython opencv-python scikit-image protobuf easydict cython
-
+git clone --recursive https://github.com/BVLC/caffe.git
+cd caffe
+cp Makefile.config.example Makefile.config
 
 
 COMMENTOUT
