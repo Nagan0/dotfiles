@@ -43,6 +43,7 @@ sudo make install -j4
 
 # Use editer
 # Add /etc/ld.so.conf "/usr/local/lib"
+# And "sudo /sbin/ldconfig"
 
 
 #----------
