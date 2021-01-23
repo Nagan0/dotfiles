@@ -26,7 +26,9 @@ cmake -D CMAKE_BUILD_TYPE=RELEASE \
 make -j4
 sudo make install -j4
 sudo ldconfig
-
+# referring to https://qiita.com/t13m082h/items/c0482b87712f1d78a0f9
+# Make "opencv4.pc"
+# Add .bashrc "export PKG_CONFIG_PATH==/usr/local/lib/pkgconfig"
 
 #----------
 # ITK
@@ -105,10 +107,20 @@ sudo apt install -y python python-pip python3-pip python-numpy python-scipy pyth
 sudo apt install -y build-essential pkg-config libprotobuf-dev libleveldb-dev libsnappy-dev libhdf5-serial-dev protobuf-compiler libatlas-base-dev libgflags-dev libgoogle-glog-dev liblmdb-dev libhdf5-dev wget
 sudo apt install -y --no-install-recommends libboost-all-dev
 pip3 install ipython opencv-python scikit-image protobuf easydict cython
+# Referring to https://qiita.com/yoyoyoyoyo/items/ed723a6e81c1f4046241
+# , https://qiita.com/sho1_24/items/a463024b7c6bd009c4e7
+# and https://ai-antena.net/ubuntu-caffe
 git clone --recursive https://github.com/BVLC/caffe.git
 cd caffe
 cp Makefile.config.example Makefile.config
+# Write Makefile.config and Makefile
+# Add CMakeList.txt "NVCCFLAGS += -D_FORCE_INLINES -ccbin=$(CXX) -Xcompiler -fPIC $(COMMON_FLAGS)"
+make all -j8
+make test -j8
+make runtest -j8
 
-
+pip3 install -r python/requirements.txt
+make pycaffe -j8
+# Add .bashrc "export PYTHONPATH=~/caffe/python:$PYTHONPATH"
 COMMENTOUT
 

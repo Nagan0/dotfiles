@@ -166,3 +166,5 @@ source ~/denso_ws/devel/setup.bash
 export CUDAHOME=/usr/local/cuda
 export PATH=/usr/local/cuda-10.0/bin${PATH:+:${PATH}}
 export LD_LIBRARY_PATH=/usr/local/cuda-10.0/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+export PKG_CONFIG_PATH==/usr/local/lib/pkgconfig
+export PYTHONPATH=$HOME/caffe/python
