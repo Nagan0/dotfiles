@@ -3,8 +3,8 @@
 #----------
 # some module
 #----------
-pip install pydicom pynrrd h5py psutil matplotlib scikit-image scikit-build
-pip3 install pydicom pynrrd h5py psutil matplotlib scikit-image scikit-build
+pip install pydicom pynrrd h5py psutil matplotlib scikit-image scikit-build natsort
+pip3 install pydicom pynrrd h5py psutil matplotlib scikit-image scikit-build natsort
 
 #----------
 # opencv c++
@@ -122,5 +122,7 @@ make runtest -j8
 pip3 install -r python/requirements.txt
 make pycaffe -j8
 # Add .bashrc "export PYTHONPATH=~/caffe/python:$PYTHONPATH"
+sudo apt install -y caffe-tools-cpu 
+sudo apt install -y caffe-tools-cuda
 COMMENTOUT
 
