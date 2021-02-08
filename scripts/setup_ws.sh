@@ -10,7 +10,7 @@ pip3 install pydicom pynrrd h5py psutil matplotlib scikit-image scikit-build nat
 # opencv c++
 #----------
 sudo apt install -y  cmake libgtk2.0-dev pkg-config libavcodec-dev libavformat-dev libswscale-dev
-sudo apt install python3-dev python3-numpy libtbb2 libtbb-dev libjpeg-dev libpng-dev libtiff-dev libdc1394-22-dev
+sudo apt install -y python3-dev python3-numpy libtbb2 libtbb-dev libjpeg-dev libpng-dev libtiff-dev libdc1394-22-dev
 git clone https://github.com/opencv/opencv.git
 git clone https://github.com/opencv/opencv_contrib.git
 
@@ -33,6 +33,7 @@ sudo ldconfig
 #----------
 # ITK
 #----------
+# referring to https://www.kkaneko.jp/tools/ubuntu/itk.html
 sudo apt -yV install build-essential gcc g++ dpkg-dev pkg-config
 
 cd /tmp
@@ -54,6 +55,7 @@ sudo make install -j4
 #----------
 sudo apt install -y libboost-dev libboost-all-dev
 git clone https://github.com/soumickmj/DenseInferenceWrapper.git
+# If you use ubuntu16, clone https://github.com/mbickel/DenseInferenceWrapper.git
 cd DenseInferenceWrapper
 make all
 sudo pip install .
