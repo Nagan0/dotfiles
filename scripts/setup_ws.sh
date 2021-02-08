@@ -63,19 +63,12 @@ sudo pip install .
 # export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
 
 << COMMENTOUT
-#----------
-# gpu driver
-#----------
-ubuntu-drivers devices
-sudo ubuntu-drivers autoinstall
-sudo reboot
-nvidia-smi
 
 #----------
 # GPU driver
 #----------
-sudo apt update
 sudo add-apt-repository ppa:graphics-drivers/ppa
+sudo apt update
 ubuntu-drivers devices
 sudo apt install nvidia-#Version
 sudo reboot
