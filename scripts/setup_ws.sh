@@ -56,6 +56,7 @@ sudo make install -j4
 sudo apt install -y libboost-dev libboost-all-dev
 git clone https://github.com/soumickmj/DenseInferenceWrapper.git
 # If you use ubuntu16, clone https://github.com/mbickel/DenseInferenceWrapper.git
+# and "sudo apt-get install python-numpy "
 cd DenseInferenceWrapper
 make all
 sudo pip install .
