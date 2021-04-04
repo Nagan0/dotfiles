@@ -10,7 +10,7 @@ pip3 install pydicom pynrrd h5py psutil matplotlib scikit-image scikit-build nat
 # opencv c++
 #----------
 sudo apt install -y  cmake libgtk2.0-dev pkg-config libavcodec-dev libavformat-dev libswscale-dev
-sudo apt install -y python3-dev python3-numpy libtbb2 libtbb-dev libjpeg-dev libpng-dev libtiff-dev libdc1394-22-dev
+sudo apt install -y python3-numpy libtbb2 libtbb-dev libjpeg-dev libpng-dev libtiff-dev libdc1394-22-dev
 git clone https://github.com/opencv/opencv.git
 git clone https://github.com/opencv/opencv_contrib.git
 
@@ -53,11 +53,17 @@ sudo make install -j4
 #----------
 # denseinference
 #----------
-sudo apt install -y libboost-dev libboost-all-dev
-git clone https://github.com/soumickmj/DenseInferenceWrapper.git
-# If you use ubuntu16, clone https://github.com/mbickel/DenseInferenceWrapper.git
-# and "sudo apt-get install python-numpy "
+sudo apt install -y python3-dev python3-numpy libboost-dev libboost-all-dev
+git clone https://github.com/Nagan0/DenseInferenceWrapper.git
+# Download boost from https://www.boost.org/
+# ./boostrap.sh --with-python=python3.8
+# mkdir ~/local
+# ./ b2 install -j8 --prefix=~/local
+# しなくていいかも
+ 
 cd DenseInferenceWrapper
+# Change denseinference/lib/Makefile referring to https://github.com/mbickel/DenseInferenceWrapper/issues/4
+# Python3.8~, python*m don't exist. Change python*m to python*.
 make all
 sudo pip install .
 
