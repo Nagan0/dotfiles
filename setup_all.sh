@@ -29,6 +29,11 @@ sudo dpkg -i ./google-chrome*.deb
 sudo apt-get -fy install
 cd ~/dotfiles
 
+# -- Mozc --
+sudo apt install ibus-mozc
+killall ibus-daemon
+ibus-daemon -d -x &
+
 # -- scripts --
 ./scripts/setup_powerline.sh
 
