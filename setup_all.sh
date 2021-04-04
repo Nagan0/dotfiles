@@ -1,14 +1,16 @@
 #!/bin/bash
 
 
+sudo apt update
+
 # -- pip --
-sudo apt install -y python-pip python3-pip
+sudo apt install -y python3-pip
 
 # -- curl --
 sudo apt install -y curl
 
-# -- Terminator --
-sudo apt install -y terminator
+# -- Terminator & tmux --
+sudo apt install -y terminator tmux
 
 # -- Git --
 sudo apt install -y git

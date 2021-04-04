@@ -9,6 +9,9 @@ case $- in
 esac
 
 
+# ----------
+# function
+# ----------
 function cd()
 {
   builtin cd "$@" && ls -Fav --color=auto
@@ -20,13 +23,8 @@ function update()
   sudo apt upgrade
   sudo apt autoremove
   sudo apt autoclean
-
-  # sudo -H pip2 install --upgrade pip
-  # sudo -H pip2 list --outdated 2> /dev/null
-
-  # sudo -H pip3 install --upgrade pip
-  # sudo -H pip3 list --outdated
 }
+
 
 # 出力の後に改行を入れる
 function add_line
@@ -39,6 +37,7 @@ function add_line
 }
 PROMPT_COMMAND='add_line'
 
+
 #powerline-shell
 function _update_ps1() {
     PS1="( ^o^) < $(powerline-shell $?)"
@@ -47,7 +46,6 @@ function _update_ps1() {
 if [[ $TERM != linux && ! $PROMPT_COMMAND =~ _update_ps1 ]]; then
   PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
 fi
-
 
 
 # don't put duplicate lines or lines starting with space in the history.
@@ -109,8 +107,6 @@ unset color_prompt force_color_prompt
 case "$TERM" in
 xterm*|rxvt*)
     PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
-
-    #PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
     ;;
 *)
     ;;
@@ -159,12 +155,3 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-
-
-source /opt/ros/kinetic/setup.bash
-source ~/denso_ws/devel/setup.bash
-export CUDAHOME=/usr/local/cuda
-export PATH=/usr/local/cuda-10.0/bin${PATH:+:${PATH}}
-export LD_LIBRARY_PATH=/usr/local/cuda-10.0/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
-export PKG_CONFIG_PATH==/usr/local/lib/pkgconfig
-export PYTHONPATH=$HOME/caffe/python

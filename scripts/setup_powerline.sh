@@ -1,23 +1,24 @@
 #!/bin/bash -eu
 
 
+# Download Powerline fonts
 git clone https://github.com/powerline/fonts.git --depth=1
 cd fonts/
 ./install.sh
 cd ..
 rm -rf fonts/
 
-gsettings set org.gnome.desktop.interface monospace-font-name 'Ubuntu Mono derivative Powerline 14'
+gsettings set org.gnome.desktop.interface monospace-font-name 'Source Code Pro for Powerline Regular 12'
 
 # powerline-shell
 cd ~/
 mkdir warehouse && cd $_
 git clone https://github.com/b-ryan/powerline-shell
 cd powerline-shell/
-sudo python setup.py install
+sudo python3 setup.py install
 cd ~/
 
-python -m pip install --user powerline-status
+pip3 install --user powerline-status
 
 # vim theme - molokai
 cd ~/

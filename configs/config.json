@@ -8,6 +8,5 @@
     "newline",
     "root"
   ],
-  "mode": "flat",
   "theme": "~/dotfiles/themes/powerline-shell_theme.py"
 }
