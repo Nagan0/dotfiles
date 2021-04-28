@@ -9,25 +9,14 @@ sudo apt install -y python3-pip
 # -- curl --
 sudo apt install -y curl
 
-# -- Terminator & tmux --
-sudo apt install -y terminator tmux
-
 # -- Git --
 sudo apt install -y git
 git config --global user.name "Nagan0"
 git config --global user.email "49261854+Nagan0@users.noreply.github.com"
 
 # -- Vim --
-sudo apt-add-repository -y ppa:jonathonf/vim
-sudo apt -y update
-sudo apt install -y vim-gnome && sudo apt -y remove vim-tiny
-
-# -- Google Chrome --
-cd ~/Downloads
-wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-sudo dpkg -i ./google-chrome*.deb
-sudo apt-get -fy install
-cd ~/dotfiles
+sudo apt --purge remove -y vim-common vim-tiny
+sudo apt install -y vim
 
 # -- Mozc --
 sudo apt install ibus-mozc
