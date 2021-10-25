@@ -33,6 +33,8 @@ cd ~/dotfiles
 sudo apt install ibus-mozc
 killall ibus-daemon
 ibus-daemon -d -x &
+ibus restart
+gsettings set org.gnome.desktop.input-sources sources "[('xkb', 'jp'), ('ibus', 'mozc-jp')]"
 
 # -- scripts --
 ./scripts/setup_powerline.sh
